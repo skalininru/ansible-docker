@@ -20,4 +20,6 @@ You can mount an SSH key pair and specify variables:
 ```
 docker run --rm -it -v ~/.ssh/id_rsa:/root/.ssh/id_rsa \
    -v ~/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub \
-   -v $(pwd):/ansible docker-ansible timezone_setup.yml --extra-vars "my_timezone=Europe/Moscow" -i hosts```
+   -v $(pwd):/ansible docker-ansible timezone_setup.yml \
+   --extra-vars "my_timezone=Europe/Moscow" -i hosts
+```
